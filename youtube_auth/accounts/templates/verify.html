@@ -1,0 +1,13 @@
+<!-- accounts/templates/verify.html -->
+{% extends "base.html" %}
+{% block title %}Verify Account - MyTube{% endblock %}
+
+{% block content %}
+<h2>Email Verification</h2>
+{% if error %}
+  <div class="alert alert-danger">{{ error }}</div>
+{% else %}
+  <div class="alert alert-success">Account Verified Successfully!</div>
+  <a href="{% url 'login' %}" class="btn btn-primary">Login Now</a>
+{% endif %}
+{% endblock %}

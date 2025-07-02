@@ -1,0 +1,10 @@
+<!-- accounts/templates/dashboard.html -->
+{% extends "base.html" %}
+{% block title %}Dashboard - MyTube{% endblock %}
+
+{% block content %}
+<div class="bg-success text-light p-3">
+<h2>Welcome to your Dashboard, {{ user.username }}!</h2>
+<p>This page is protected and only visible to logged-in users.</p>
+</div>
+{% endblock %}

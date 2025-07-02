@@ -1,0 +1,19 @@
+<!-- accounts/templates/login.html -->
+{% extends "base.html" %}
+{% block title %}Login - MyTube{% endblock %}
+
+{% block content %}
+<h2 class="bg-primary-subtle p-3">Login</h2>
+<form method="POST" class="bg-warning-subtle p-3">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="username">Username:</label>
+    <input type="text" name="username" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="password">Password:</label>
+    <input type="password" name="password" class="form-control" required>
+  </div>
+  <button type="submit" class="btn btn-success">Login</button>
+</form>
+{% endblock %}
